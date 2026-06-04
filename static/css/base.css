@@ -1,0 +1,34 @@
+/* Reset global pour une base de rendu propre sur tous les navigateurs. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style general de l'application. */
+body {
+    background-color: #1a1a2e;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Titre principal commun aux pages. */
+h1 {
+    font-size: 28px;
+    color: #e94560;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Texte descriptif secondaire. */
+p {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-bottom: 20px;
+    text-align: center;
+}

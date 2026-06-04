@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Metadonnees + styles de base et styles de la page trajectoire -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracé de trajectoire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/trajectory.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Entete avec navigation retour -->
+    <header class="page-header">
+        <a href="/" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Accueil
+        </a>
+        <h1>Tracé de trajectoire</h1>
+    </header>
+
+    <!-- Zone de trace avec labels de direction -->
+    <div class="arena-wrapper">
+    <p class="direction-label top">▼ DERRIERE</p>
+    <div class="arena-row">
+        <p class="direction-label left">◄ GAUCHE</p>
+        <div class="arena-container">
+            <canvas id="drawCanvas" width="560" height="400"></canvas>
+        </div>
+        <p class="direction-label right">DROITE ►</p>
+    </div>
+    <p class="direction-label bottom">▲ DEVANT</p>
+</div>
+
+    <!-- Actions utilisateur: effacer, envoyer, stop, reprendre -->
+    <div class="buttons">
+        <button id="btn-clear">
+            <i class="fa-solid fa-trash"></i> Effacer
+        </button>
+        <button id="btn-send">
+            <i class="fa-solid fa-paper-plane"></i> Envoyer au robot
+        </button>
+        <button id="btn-stop">
+            <i class="fa-solid fa-stop"></i> STOP
+        </button>
+        <button id="btn-resume">
+            <i class="fa-solid fa-play"></i> Reprendre
+        </button>
+    </div>
+
+    <!-- Retour de statut robot cote interface -->
+    <p id="status">Commence ton trace depuis le centre</p>
+
+    <!-- Logique front de dessin et communication avec le backend -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

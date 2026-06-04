@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Metadonnees + ressources communes -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab'CESI Robot Controller</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Ecran d'accueil avec acces vers la page de trace -->
+    <div class="welcome-container">
+        <img src="{{ url_for('static', filename='turtlebot.png') }}" alt="TurtleBot3" class="robot-img">
+        <h1>Lab'CESI Robot Controller</h1>
+        <p>Interface de contrôle du TurtleBot3</p>
+        <a href="/trajectory" class="btn-start">
+            <i class="fa-solid fa-route"></i> Lancer le tracé
+        </a>
+    </div>
+</body>
+</html>

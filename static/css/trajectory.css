@@ -1,0 +1,131 @@
+
+/* Bandeau superieur: bouton retour + titre. */
+.page-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Bouton de retour vers l'accueil. */
+.btn-back {
+    text-decoration: none;
+    color: white;
+    background-color: #16213e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #e94560;
+}
+
+/* Cadre du canvas de dessin. */
+.arena-container {
+    border: 3px solid #e94560;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Surface de trace (souris/tactile). */
+#drawCanvas {
+    display: block;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+/* Zone de boutons d'action. */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Style commun de tous les boutons. */
+button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Bouton effacer. */
+#btn-clear {
+    background-color: #16213e;
+    color: white;
+    border: 2px solid #e94560;
+}
+
+/* Bouton envoyer. */
+#btn-send {
+    background-color: #e94560;
+    color: white;
+}
+
+/* Bouton stop. */
+#btn-stop {
+    background-color: #30888b2d;
+    color: white;
+    font-size: 18px;
+}
+
+/* Message de statut dynamique sous les boutons. */
+#status {
+    font-size: 14px;
+    color: #aaaaaa;
+    text-align: center;
+    min-height: 20px;
+}
+
+#status.success { color: #4ecca3; }
+#status.error   { color: #e94560; }
+#status.sending { color: #f5a623; }
+
+
+/* Grille de placement des libelles directionnels autour de l'arene. */
+
+.arena-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+/* Ligne centrale: label gauche + canvas + label droite. */
+.arena-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Apparence des indications de direction (devant, derriere, etc.). */
+.direction-label {
+    color: #4ecca3;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bouton reprise. */
+#btn-resume {
+    background-color: #4ecca3;
+    color: #1a1a2e;
+}
