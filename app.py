@@ -199,8 +199,8 @@ def convert_to_commands(real_points):
 def execute_commands(commands, start_index=0):
     """Execute les commandes de trajectoire en surveillant les obstacles."""
     global stop_flag, current_command_index, robot_status
-    LINEAR_SPEED  = 0.10
-    ANGULAR_SPEED = 0.30
+    LINEAR_SPEED  = 0.15
+    ANGULAR_SPEED = 0.20
 
     robot_status = "moving"
 
